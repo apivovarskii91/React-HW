@@ -1,0 +1,29 @@
+.auto{
+  padding: 20px;
+}
+
+.product-title{
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+.product-image{
+  margin-bottom: 15px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.product-price{
+  font-size: 20px;
+}
+.product-price > span{
+ color: red;
+}
+
+.btns-wrap{
+  display: flex;
+  justify-content: center;
+}

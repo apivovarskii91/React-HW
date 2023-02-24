@@ -1,11 +1,11 @@
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Container } from '@mui/material'
-import logo from 'assets/logo.png'
+import Logo from 'components/Logo/Logo'
+import Menu from 'components/Logo/Menu/Menu'
+import CartHeader from 'components/Logo/CartHeader/CartHeader'
 
 type Props = {}
 
@@ -15,7 +15,7 @@ const Header = (props: Props) => {
             <AppBar
                 position="static"
                 sx={{
-                    backgroundColor: 'white',
+                    backgroundColor: 'grey',
                 }}
             >
                 <Container>
@@ -23,20 +23,14 @@ const Header = (props: Props) => {
                         <IconButton
                             size="large"
                             edge="start"
-                            color="inherit"
                             aria-label="menu"
-                            sx={{ mr: 2 }}
+                            sx={{ mr: 2, color: 'black' }}
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography
-                            variant="h6"
-                            component="div"
-                            sx={{ flexGrow: 1 }}
-                        >
-                            <img src={logo} />
-                        </Typography>
-                        <Button color="inherit">Login</Button>
+                        <Logo />
+                        <Menu />
+                        <CartHeader />
                     </Toolbar>
                 </Container>
             </AppBar>
