@@ -19,7 +19,7 @@ const productsArray:Product[] = [
   transmission:"Manual",
   engine:"Petrol",
   color:"Blue",
-  price:49950.00,
+  price:49950,
   image: "./images/audi-1.jpg"
 },
 {

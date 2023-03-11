@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent } from '@mui/material'
+import { Card, CardActions, CardContent } from '@mui/material'
 import './AutoListItem.scss'
 
 type Props = {
@@ -20,25 +20,21 @@ const AutoListItem = ({
     image,
 }: Props) => {
     return (
-        <Card variant="outlined" className="auto">
+        <Card className="auto">
             <CardContent>
                 <div className="product-image">
                     <img src={image} alt="" />
                 </div>
                 <div className="product-title">{title}</div>
-                <div className="product-mileage">Mileage: {mileage} mi</div>
-                <div className="product-transmission">
-                    Transmission: {transmission}
+                <div className="product-mileage">
+                    {mileage} mi • {transmission} • {engine} • {color}
                 </div>
-                <div className="product-engine">Engine: {engine}</div>
-                <div className="product-color">Color: {color}</div>
+                <div className="product-border"></div>
                 <div className="product-price">
-                    Price: <span>${price}</span>
+                    Price: <span>${price}.00</span>
                 </div>
             </CardContent>
-            <CardActions className="btns-wrap">
-                <Button variant="outlined">Add to card</Button>
-            </CardActions>
+            <CardActions></CardActions>
         </Card>
     )
 }

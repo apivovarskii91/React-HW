@@ -12,7 +12,7 @@ const AutoList = (props: Props) => {
                 align="center"
                 sx={{ marginBottom: '30px' }}
             >
-                Auto List
+                Latest Inventory
             </Typography>
             <Grid container spacing={4}>
                 {productsArray.map(
