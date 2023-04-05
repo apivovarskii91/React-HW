@@ -14,7 +14,9 @@ type ReviewsState = {
     text: string
 }
 
-const Reviews = () => {
+const Reviews = (props: Props) => {
+    // eslint-disable-line @typescript-eslint/no-unused-vars
+
     const arrReviews = [
         {
             name: 'Саша',
