@@ -9,13 +9,15 @@ import {
 import React, { useState } from 'react'
 import SendIcon from '@mui/icons-material/Send'
 
+type Props = {}
+
 type Reviews = {
     name: string
     text: string
 }
 
-const Reviews = () => {
-    // @typescript-eslint/no-redeclare
+const Reviews = (props: Props) => {
+    // eslint-disable-line @typescript-eslint/no-unused-vars
     const arrReviews = [
         {
             name: 'Саша',
