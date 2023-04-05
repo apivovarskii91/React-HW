@@ -15,6 +15,7 @@ type Reviews = {
 }
 
 const Reviews = () => {
+    // @typescript-eslint/no-redeclare
     const arrReviews = [
         {
             name: 'Саша',
