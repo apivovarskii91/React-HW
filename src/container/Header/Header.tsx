@@ -4,12 +4,16 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Container } from '@mui/material'
 import Logo from 'components/Logo/Logo'
-import Menu from 'components/Logo/Menu/Menu'
-import CartHeader from 'components/Logo/CartHeader/CartHeader'
+import Menu from 'components/Menu/Menu'
+import CartHeader from 'components/CartHeader/CartHeader'
 
-type Props = {}
+type Props = {
+    autoInCart: {
+        [id: number]: number
+    }
+}
 
-const Header = (props: Props) => {
+const Header = ({ autoInCart }: Props) => {
     return (
         <>
             <AppBar
@@ -19,7 +23,7 @@ const Header = (props: Props) => {
                     boxShadow: 'none',
                 }}
             >
-                <Container>
+                <Container maxWidth="xl">
                     <Toolbar>
                         <IconButton
                             size="large"
@@ -31,7 +35,6 @@ const Header = (props: Props) => {
                         </IconButton>
                         <Logo />
                         <Menu />
-                        <CartHeader />
                     </Toolbar>
                 </Container>
             </AppBar>

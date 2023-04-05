@@ -1,10 +1,25 @@
-import AutoList from 'components/Logo/AutoList/AutoList'
+import AutoList from 'components/AutoList/AutoList'
+import BackgroundMobile from 'components/BackgroundMobile/BackgroundMobile'
+import Reviews from 'components/Reviews/Reviews'
 
-type Props = {}
-const Home = (props: Props) => {
+type Props = {
+    addAutoToCart: (id: number, count: number) => void
+    productsLike: {
+        [id: number]: boolean
+    }
+    toggleLike: (id: number) => void
+}
+const Home = ({ addAutoToCart, productsLike, toggleLike }: Props) => {
     return (
         <>
-            <AutoList />
+            <BackgroundMobile />
+
+            <AutoList
+                addAutoToCart={addAutoToCart}
+                productsLike={productsLike}
+                toggleLike={toggleLike}
+            />
+            <Reviews />
         </>
     )
 }
