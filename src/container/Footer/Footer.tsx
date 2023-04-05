@@ -6,7 +6,6 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import CopyrightIcon from '@mui/icons-material/Copyright'
-import Button from '@mui/material/Button'
 
 type Props = {}
 const Footer = (props: Props) => {

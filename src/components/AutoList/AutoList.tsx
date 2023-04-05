@@ -1,4 +1,4 @@
-import { Grid, TextField, Typography } from '@mui/material'
+import { Grid, TextField, Typography } from '@mui/material' // eslint-disable-line @typescript-eslint/no-unused-vars
 import AutoListItem from './AutoListItem'
 import productsArray from 'utils/productsArray'
 import Field from 'components/Field/Field'

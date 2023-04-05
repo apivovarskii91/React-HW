@@ -1,5 +1,3 @@
-import BackgroundCategori from 'components/BackgroundMobile/BackgroundСategories'
-import BackgroundMobile from 'components/BackgroundMobile/BackgroundMobile'
 import BackgroundСategories from 'components/BackgroundMobile/BackgroundСategories'
 
 type Props = {}

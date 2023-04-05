@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent } from '@mui/material'
+import { Button, Card, CardActions, CardContent } from '@mui/material' // eslint-disable-line @typescript-eslint/no-unused-vars
 
 import './AutoListItem.scss'
 import { useState } from 'react'
@@ -31,7 +31,7 @@ const AutoListItem = ({
     isLiked,
     toggleLike,
 }: Props) => {
-    const [count, setCount] = useState<number>(1)
+    const [count, setCount] = useState<number>(1) // eslint-disable-line @typescript-eslint/no-unused-vars
 
     return (
         <Card className="auto">
