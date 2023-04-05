@@ -14,8 +14,7 @@ type Reviews = {
     text: string
 }
 
-const Reviews = () => {
-    // @typescript-eslint/no-redeclare
+const Reviews = () => { // @typescript-eslint/no-redeclare
     const arrReviews = [
         {
             name: 'Саша',
