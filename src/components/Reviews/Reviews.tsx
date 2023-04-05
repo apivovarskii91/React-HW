@@ -9,16 +9,12 @@ import {
 import React, { useState } from 'react'
 import SendIcon from '@mui/icons-material/Send'
 
-type Props = {}
-
-type Reviews = {
+type ReviewsState = {
     name: string
     text: string
 }
 
-const Reviews = (props: Props) => {
-    // eslint-disable-line @typescript-eslint/no-unused-vars
-
+const Reviews = () => {
     const arrReviews = [
         {
             name: 'Саша',
@@ -29,8 +25,8 @@ const Reviews = (props: Props) => {
             text: ' Отличный сервис, очень доволен обслуживанием. Помогли решить проблему, которую вообще никто не мог решить.',
         },
     ]
-    const [reviews, setReviews] = useState<Reviews[]>(arrReviews)
-    const [newReview, setNewReview] = useState<Reviews>({
+    const [reviews, setReviews] = useState<ReviewsState[]>(arrReviews)
+    const [newReview, setNewReview] = useState<ReviewsState>({
         name: '',
         text: '',
     })
