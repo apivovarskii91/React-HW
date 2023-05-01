@@ -5,13 +5,13 @@ import Field from 'components/Field/Field'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded'
 
 type Props = {
-    addAutoToCart: (id: number, count: number) => void
+    
     productsLike: {
         [id: number]: boolean
     }
     toggleLike: (id: number) => void
 }
-const AutoList = ({ addAutoToCart, productsLike, toggleLike }: Props) => {
+const AutoList = ({  productsLike, toggleLike }: Props) => {
     return (
         <>
             <Typography
@@ -61,7 +61,6 @@ const AutoList = ({ addAutoToCart, productsLike, toggleLike }: Props) => {
                                 color={color}
                                 price={price}
                                 image={image}
-                                addAutoToCart={addAutoToCart}
                                 isLiked={productsLike[id]}
                                 toggleLike={toggleLike}
                             />

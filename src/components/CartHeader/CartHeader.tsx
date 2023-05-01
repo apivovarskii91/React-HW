@@ -1,4 +1,3 @@
-import CartProductList from 'components/CartProductsList/CartProductsList'
 import CartTotal from 'components/CartTotal/CartTotal'
 
 type Props = {
@@ -9,7 +8,6 @@ type Props = {
 const CartHeader = ({ autoInCart }: Props) => {
     return (
         <div>
-            <CartProductList autoInCart={autoInCart} />
             <CartTotal autoInCart={autoInCart} />
         </div>
     )

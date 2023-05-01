@@ -14,7 +14,7 @@ type Props = {
     color: string
     price: number
     image: string
-    addAutoToCart: (id: number, count: number) => void
+
     isLiked: boolean
     toggleLike: (id: number) => void
 }
@@ -27,7 +27,7 @@ const AutoListItem = ({
     color,
     price,
     image,
-    addAutoToCart,
+
     isLiked,
     toggleLike,
 }: Props) => {
@@ -62,20 +62,6 @@ const AutoListItem = ({
                 <div className="product-border"></div>
                 <div className="product-price">
                     Price: <span>${price}.00</span>
-                    <Button
-                        onClick={() => addAutoToCart(id, count)}
-                        sx={{
-                            backgroundColor: '#bd162d',
-                            color: 'white',
-                            margin: '0 0 10px 20px',
-                            '&:hover': {
-                                backgroundColor: '#1976d2',
-                            },
-                        }}
-                        variant="outlined"
-                    >
-                        Add to card
-                    </Button>
                 </div>
             </CardContent>
         </Card>

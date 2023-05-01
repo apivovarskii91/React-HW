@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { useState } from 'react'
 import { Container } from '@mui/system'
 import Home from 'pages/Home/Home'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Router } from 'react-router-dom'
 import CartPage from 'pages/CartPage/CartPage'
 import InventoryPage from 'pages/InventoryPage/InventoryPage'
 import LatestsOffersPage from 'pages/LatestsOffersPage/LatestsOffersPage'
@@ -32,12 +32,7 @@ const App = (props: Props) => {
         1: true,
         2: true,
     })
-    const addAutoToCart = (id: number, count: number) => {
-        setAutoInCart((prevState) => ({
-            ...prevState,
-            [id]: (prevState[id] || 0) + count,
-        }))
-    }
+
     const removeProductFromCart = (id: number) => {
         setAutoInCart((prevState) => omit(prevState, id))
     }
@@ -48,6 +43,7 @@ const App = (props: Props) => {
             [id]: !prevState[id],
         }))
     }
+
     return (
         <>
             <CssBaseline />
@@ -58,7 +54,6 @@ const App = (props: Props) => {
                         path="/"
                         element={
                             <Home
-                                addAutoToCart={addAutoToCart}
                                 productsLike={productsLike}
                                 toggleLike={toggleLike}
                             />
